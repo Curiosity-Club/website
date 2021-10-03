@@ -1,38 +1,49 @@
-body{
-    margin:0;
-    padding: 0;
-
+body {
+  margin: 0;
+  padding: 0;
 }
 
-section{
-    height:100vh;
-    width:100%;
-    background-image: url('../public/background.jpg');
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.container {
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../public/background.jpg");
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
 }
 
-h1{
-    color:WHITE;
-    font:5em 'Anurati';
+h1 {
+  color: WHITE;
+  font: 5em "Anurati";
 }
 
-anim{
-    width: 100%;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+anim {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-h3{
-    margin: 0;
-    color:white;
-    font:3.5em 'Stick no bills';
-    text-transform: capitalize;
+h3 {
+  margin: 0;
+  color: white;
+  font: 3.5em "Stick no bills";
+  text-transform: capitalize;
 }
 
-.invisible{
-    visibility: hidden ;
+.invisible {
+  visibility: hidden;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  scroll-snap-align: start;
 }
