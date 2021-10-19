@@ -1,49 +1,116 @@
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
-.container {
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-}
 main {
-  height: 100vh;
-  width: 100%;
-  background-image: url("../public/background.jpg");
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  scroll-snap-align: start;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+.cover {
+	background-image: url("../public/background.jpg");
+	text-align: center;
+	background-attachment: fixed;
+	position: relative;
 }
 
 h1 {
-  color: WHITE;
-  font: 5em "Anurati";
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: white;
+	font: 5em "Anurati";
+	margin: 10px;
 }
 
-anim {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.landing > .animation {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
 }
 
 h3 {
-  margin: 0;
-  color: white;
-  font: 3.5em "Stick no bills";
-  text-transform: capitalize;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0;
+	color: white;
+	font: 3.5em "Ubuntu", sans-serif;
 }
 
 .invisible {
-  visibility: hidden;
+	visibility: hidden;
 }
+
 section {
-  height: 100vh;
-  width: 100vw;
-  background-color: red;
-  scroll-snap-align: start;
+	height: 100vh;
+	width: 100%;
+	background-color: red;
+	scroll-snap-align: start;
+	position: relative;
+}
+
+.landing {
+	width: 55%;
+	height: 55vw;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 50%;
+	transform: translate(0px, -8%);
+	box-shadow: 0px 0px 60px 0px white;
+	backdrop-filter: blur(18px);
+}
+
+.landing > button {
+	color: white;
+	font: 1.3em "Source Sans Pro";
+	border: solid 2px white;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8vh;
+	padding: 18px 45px 18px 45px;
+	border-radius: 5px;
+	box-shadow: inset 0 0 0 0 white;
+	background-color: black;
+	transition: ease-out 0.2s;
+	z-index: 0;
+}
+
+.landing > button:hover {
+	box-shadow: inset 200px 0 0 0 white;
+	cursor: pointer;
+	color: black;
+}
+
+@media screen and (max-width: 964px) {
+	h1 {
+		font-size: 1.5em;
+		margin: 0;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	.landing > .animation {
+		margin: 0;
+	}
+
+	.landing > button {
+		font-size: 0.7em;
+		padding: 3px 5px;
+		margin-top: 20px;
+	}
+
+	.cover {
+		display: flex;
+	}
 }
